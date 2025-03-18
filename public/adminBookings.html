@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Bookings</title>
+  <link rel="stylesheet" href="/stylesheets/universal.css">
+  <link rel="stylesheet" href="/stylesheets/adminBookings.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar shrink">
+          <div class="logo">
+            <a href="/index">
+              <img src="/images/logo.png" alt="Reel Action Fishing Charters Logo">
+            </a>
+          </div>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="About">About Us</a></li>
+              <li><a href="Raptor">Raptor</a></li>
+              <li><a href="Blog">Our Blog</a></li>
+              <li><a href="Packages">Packages</a></li>
+              <li><a href="Crew">The Crew</a></li>
+              <li><a href="Testimonials">Testimonials</a></li>
+              <li><a href="Calendar">Bookings Calendar</a></li>
+              <li><a href="Contact">Contact Us</a></li>
+              <li><a href="Gallery">Photo Galleries</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+  
+    <main>
+        <section id="bookingDetails" class="section-box">
+            <h2>Bookings for: <span id="date"></span></h2>
+        </section>
+
+        <div class="details-container">
+            <p>
+                <strong>Charter Type:</strong>
+                <span id="charterType">N/A</span>
+                <select id="charterTypeInput" style="display: none;">
+                    <option value="Tuna">Tuna</option>
+                    <option value="Reef">Reef</option>
+                    <option value="Tuna and Reef">Tuna and Reef</option>
+                </select>
+            </p>
+            <p>
+                <strong>Booking Status:</strong>
+                <span id="charterStatus">N/A</span>
+                <select id="charterStatusInput" style="display: none;">
+                    <option value="tentative">Tentative</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="booked">Booked</option>
+                    <option value="unavailable">Unavailable</option>
+                    <option value="available">Available</option>
+                </select>
+            </p>
+            <p>
+                <strong>Boat Capacity:</strong>
+                <span id="boatCapacity">N/A</span>
+                <input id="boatCapacityInput" type="number" style="display: none;">
+            </p>
+            <p>
+                <strong>Charter Description:</strong>
+                <span id="charterDescription">N/A</span>
+                <textarea id="charterDescriptionInput" style="display: none;"></textarea>
+            </p>
+            <p>
+                <strong>Notes:</strong>
+                <span id="notes">N/A</span>
+                <textarea id="notesInput" style="display: none;"></textarea>
+            </p>
+        </div>
+        <div class="button-container">
+            <button id="editCharterDetails" class="btn btn-about">Edit</button>
+            <button id="saveCharterDetails" class="btn btn-book" style="display: none;">Save</button>
+            <button id="deleteCharterButton" class="btn btn-voucher" style="display: none;">Delete Charter</button>
+        </div>
+    
+        <section id="bookingList" class="section-box">
+            <h3>Existing Bookings</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Charter Type</th>
+                        <th>Status</th>
+                        <th>Number of People</th>
+                        <th>Booking Total</th>
+                        <th>Deposit Paid</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTableBody">
+                    <!-- Rows dynamically populated -->
+                </tbody>
+            </table>
+            <div class="move-bookings-container">
+                <label for="newBookingDate"><br>Move all bookings to:</label>
+                <input type="date" id="newBookingDate">
+                <button id="moveBookingsButton" class="btn btn-book">Move All</button>
+            </div>
+
+
+        </section>
+
+        <section id="addBooking" class="section-box">
+            <h3>Add New Booking</h3>
+            <form id="addBookingForm">
+                <div class="form-group">
+                    <label for="FullName">Full Name:</label>
+                    <input type="text" id="FullName" name="FullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="PhoneNumber">Phone Number:</label>
+                    <input type="tel" id="PhoneNumber" name="PhoneNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="charter_type">Charter Type:</label>
+                    <select id="charter_type" name="charter_type" required>
+                        <option value="" disabled selected>Select Charter Type</option>
+                        <option value="tuna">Tuna Fishing</option>
+                        <option value="reef">Reef Fishing</option>
+                        <option value="tuna and reef">Tuna & Reef Fishing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="number_of_people">Number of People:</label>
+                    <input type="number" id="number_of_people" name="number_of_people" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="booked">Booked</option>
+                        <option value="tentative">Tentative</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="heard_about_us">Heard About Us:</label>
+                    <select id="heard_about_us" name="heard_about_us">
+                        <option value="" disabled selected>Select Source</option>
+                        <option value="word_of_mouth">Word of Mouth</option>
+                        <option value="yellowpages">Yellow Pages</option>
+                        <option value="fishsa">FishSA</option>
+                        <option value="totaltravel">TotalTravel</option>
+                        <option value="search_engine">Search Engine</option>
+                        <option value="returning_customer">Returning Customer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking_total">Booking Total:</label>
+                    <input type="number" id="booking_total" name="booking_total" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="deposit_paid">Deposit Paid:</label>
+                    <input type="number" id="deposit_paid" name="deposit_paid" step="0.01">
+                </div>
+                <button type="submit" class="btn btn-about">Add Booking</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/javascripts/adminBookings.js"></script>
+</body>
+</html>

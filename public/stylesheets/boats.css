@@ -1,0 +1,110 @@
+.hero {
+    background-color: var(--bg-color); /* Black background for contrast */
+    color: var(--text-color); /* White text */
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid var(--secondary-colour); /* Sharp bottom border */
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Wild Cougar Details Section */
+  .boat-details {
+    background-color: var(--primary-colour); /* colour background for emphasis */
+    color: var(--text-color); /* White text for readability */
+    padding: 50px 20px;
+    text-align: left; /* Align content to the left */
+    border-bottom: 3px solid var(--secondary-colour);
+  }
+  
+  .boat-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .boat-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--secondary-colour); /* Underline the heading */
+    padding-bottom: 10px;
+  }
+  
+  .boat-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .boat-container ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+  }
+  
+  .boat-container ul li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .boat-container ul li::before {
+    content: '✔'; /* Custom bullet */
+    color: greenyellow; /* Secondary colour for the bullet */
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Gallery Preview Section */
+  .gallery-preview {
+    background-color: var(--bg-color); /* Black background for contrast */
+    color: var(--text-color);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-colour);
+  }
+  
+  .gallery-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .gallery-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap; /* Responsive layout */
+  }
+  
+  .gallery-grid img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Ensure images are properly scaled */
+    background-color: var(--tertiary-colour); /* Tertiary colour outline */
+    border: 3px solid var(--secondary-colour); /* Sharp border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for emphasis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
+    border-color: var(--hover-colour); /* Border color changes on hover */
+  }
+  

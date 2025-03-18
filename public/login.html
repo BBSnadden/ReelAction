@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Action Fishing Charters</title>
+    <link rel="stylesheet" href="/stylesheets/universal.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar shrink">
+      <div class="logo">
+        <a href="/index">
+          <img src="/images/logo.png" alt="Reel Action Fishing Charters Logo">
+        </a>
+      </div>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="About">About Us</a></li>
+          <li><a href="Raptor">Raptor</a></li>
+          <li><a href="Blog">Our Blog</a></li>
+          <li><a href="Packages">Packages</a></li>
+          <li><a href="Crew">The Crew</a></li>
+          <li><a href="Testimonials">Testimonials</a></li>
+          <li><a href="Calendar">Bookings Calendar</a></li>
+          <li><a href="Contact">Contact Us</a></li>
+          <li><a href="Gallery">Photo Galleries</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <div class="login-container">
+        <h1>Admin Login</h1>
+        <form id="loginForm" action="/login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" class="btn btn-login">Login</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Reel Action Fishing Charters. All rights reserved.</p>
+        <button id="loginButton" class="btn btn-login">Login</button>
+    </footer>
+    
+    <script src="javascripts/login.js"></script>
+    <script src="javascripts/universal.js"></script>
+</body>
+</html>

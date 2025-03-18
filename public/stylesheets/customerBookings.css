@@ -1,0 +1,118 @@
+/* Use variables from sub.css */
+:root {
+  --primary-blue: #3358b5;
+  --secondary-blue: #2059e8;
+  --tertiary-blue: #022d9c;
+  --hover-blue: #2e498f;
+  --text-color: #fff;
+  --bg-color: #000;
+}
+
+
+/* Booking Details */
+#bookingDetails {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: var(--tertiary-blue);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+#selectedDate {
+  font-weight: bold;
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--tertiary-blue);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--hover-blue);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--hover-blue);
+  box-shadow: 0 0 5px var(--hover-blue);
+}
+
+button {
+  background-color: var(--primary-blue);
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Success Message */
+#successMessage {
+  display: none;
+  text-align: center;
+  background-color: var(--secondary-blue);
+  color: var(--text-color);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#successMessage p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  #bookingDetails {
+    font-size: 1rem;
+  }
+}

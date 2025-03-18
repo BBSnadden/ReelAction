@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Bookings</title>
+  <link rel="stylesheet" href="/stylesheets/universal.css">
+  <link rel="stylesheet" href="/stylesheets/customerBookings.css"> <!-- Optional for styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar shrink">
+      <div class="logo">
+        <a href="/index">
+          <img src="/images/logo.png" alt="Reel Action Fishing Charters Logo">
+        </a>
+      </div>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="About">About Us</a></li>
+          <li><a href="Raptor">Raptor</a></li>
+          <li><a href="Blog">Our Blog</a></li>
+          <li><a href="Packages">Packages</a></li>
+          <li><a href="Crew">The Crew</a></li>
+          <li><a href="Testimonials">Testimonials</a></li>
+          <li><a href="Calendar">Bookings Calendar</a></li>
+          <li><a href="Contact">Contact Us</a></li>
+          <li><a href="Gallery">Photo Galleries</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <div id="bookingDetails">
+      <h2 id="selectedDate">MAKE A BOOKING FOR: <br><span id="date"></span></h2>
+    </div>
+
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="FullName">Full Name:</label>
+        <input type="text" id="FullName" name="FullName" required>
+      </div>
+      <div class="form-group">
+        <label for="PhoneNumber">Phone Number:</label>
+        <input type="tel" id="PhoneNumber" name="PhoneNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="charter_type">Charter Type:</label>
+        <select id="charter_type" name="charter_type" required>
+          <option value="" disabled selected>Select Charter Type</option>
+          <option value="tuna">Tuna Fishing</option>
+          <option value="reef">Reef Fishing</option>
+          <option value="tuna and reef">Tuna & Reef Fishing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="State">Where Are You From:</label>
+        <select id="State" name="State" required>
+          <option value="" disabled selected>Select an Option</option>
+          <option value="SA">South Australia</option>
+          <option value="VIC">Victoria</option>
+          <option value="NSW">New South Wales</option>
+          <option value="QLD">Queensland</option>
+          <option value="NT">Northern Territory</option>
+          <option value="WA">Western Australia</option>
+          <option value="TAS">Tasmania</option>
+          <option value="International">International</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="number_of_people">Number of People:</label>
+        <select id="number_of_people" name="number_of_people" required>
+            <option value="" disabled selected>Select Number of People</option>
+            <!-- Options will be dynamically inserted here via JavaScript -->
+        </select>
+    </div>
+
+      <div class="form-group">
+        <label for="heard_about_us_customer">How did you hear about us:</label>
+        <select id="heard_about_us_customer" name="heard_about_us_customer">
+          <option value="" disabled selected>Select an Option</option>
+          <option value="word_of_mouth">Word of Mouth</option>
+          <option value="search_engine">Search Engine</option>
+          <option value="returning_customer">Returning Customer</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <button type="submit">Submit Booking</button>
+    </form>
+
+    <div id="successMessage" style="display: none;">
+      <p>Booking submitted successfully! Thank you.</p>
+    </div>
+  </main>
+
+  <script src="/javascripts/customerBookings.js"></script>
+</body>
+</html>

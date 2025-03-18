@@ -1,0 +1,473 @@
+/* Hero section */
+.hero {
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  text-align: center;
+  border-bottom: 5px solid var(--secondary-colour);
+}
+.hero-image {
+  max-width: 30%;
+  /* Ensure the image doesn't exceed its container */
+  border-radius: 10px;
+  /* Optional: Add some rounding to the image */
+}
+.hero h1 {
+  font-size: 5rem;
+  color: var(--text-color);
+  width: 100%;
+  background-color: transparent;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  display: inline-block;
+  animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), 0 0 5px var(--primary-colour), 0 0 10px var(--primary-colour), 0 0 15px var(--primary-colour);
+  }
+  to {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), 0 0 10px var(--secondary-colour), 0 0 15px var(--secondary-colour), 0 0 20px var(--secondary-colour);
+  }
+}
+
+.hero-content {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+/* Button styles */
+
+/* Specific button styles */
+.btn-book {
+  background-color: var(--primary-colour);
+  color: black;
+  border: var(--tertiary--colour) 2px solid;
+
+}
+.btn-voucher {
+  background-color: var(--secondary-colour);
+  color: black;
+  border: var(--tertiary-colour) 2px solid;
+}
+
+.btn-book:hover {
+  background-color: var(--secondary-colour);
+}
+.btn-about {
+  background-color: var(--secondary-colour);
+  color: var(--text-color);
+  margin-right: 10px;
+  border: none;
+}
+.btn-about:hover {
+  background-color: var(--hover-colour);
+  color: var(--bg-color);
+}
+
+/* Section styles */
+.about,.partners,.upcoming-trips {
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 5px solid var(--primary-colour);
+}
+.content,.upcoming-trips .trips-content {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid var(--secondary-colour);
+  padding: 20px;
+}
+.about {
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 1;
+  background: linear-gradient(to right,transparent 25%,var(--primary-colour) 30%,var(--primary-colour) 70%,transparent 75%);
+  overflow: hidden;
+  /* Prevent scrolling images from exceeding bounds */
+}
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,transparent 25%,var(--primary-colour) 30%,var(--primary-colour) 70%,transparent 75%);
+  z-index: 2;
+  /* Ensures the gradient is above the images but below text */
+  pointer-events: none;
+  /* Ensures the gradient does not block interactions */
+}
+.scrolling-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+  /* Allows the container to stretch dynamically */
+}
+.scrolling-images img {
+  flex-shrink: 0;
+  /* Prevent images from shrinking */
+  height: 100%;
+  /* Ensure images fill the black section's height */
+  width: auto;
+  /* Maintain image aspect ratio */
+  margin-right: 20px;
+  /* Optional spacing between images */
+  object-fit: cover;
+  /* Ensures proper scaling of images */
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--text-color);
+  /* Match text color */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 4;
+  /* Ensure arrows appear above everything */
+}
+.arrow-left {
+  left: 10px;
+  /* Position left arrow */
+}
+.arrow-right {
+  right: 10px;
+  /* Position right arrow */
+}
+.arrow:hover,.arrow:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Highlighted background */
+  color: var(--highlight-color);
+  /* Optional: change text color on focus */
+}
+.about-content {
+  position: relative;
+  background-color: var(--primary-colour);
+  color: var(--text-color);
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  /* Ensures the content appears above the images */
+}
+.about-content h2 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+.about-content p {
+  line-height: 1.8;
+  color: var(--text-color);
+  font-size: 90%;
+}
+/* Partner logos */
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.partners-logos img {
+  height: 100px;
+}
+/* Upcoming trips */
+.upcoming-trips .facebook-feed {
+  margin-top: 20px;
+  border: 2px solid var(--secondary-colour);
+  padding: 10px;
+}
+
+.charters-available {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  grid-template-rows: repeat(2, 1fr);
+  /* 2 rows */
+  gap: 20px;
+  padding: 20px;
+  background: black;
+  border-bottom: 5px solid var(--primary-colour);
+}
+.charters-available-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.charters-available-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: var(--primary-colour);
+  border: var(--primary-colour) solid 2px;
+}
+.charters-available-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.charters-available-text-ribbon {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.charters-available-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0.9);
+  /* Slightly shrink the overlay initially */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+}
+.charters-available-image-container:hover .charters-available-hover-overlay {
+  opacity: 1;
+  /* Make the overlay visible */
+  transform: scale(1);
+  /* Grow to full size */
+}
+/* Section Styling */
+.big-sell {
+  display: flex;
+  flex-direction: row;
+  /* Align items horizontally */
+  justify-content: center;
+  /* Center the items within the container */
+  align-items: center;
+  /* Vertically center items */
+  height: 550px;
+  /* 60% of the viewport height */
+  position: relative;
+  overflow: hidden;
+  background: black;
+  /* Use the black background */
+  border-bottom: 8px solid var(--primary-colour);
+  /* Adjust border as needed */
+  gap: 20px;
+  /* Space between divs */
+}
+.big-sell > div {
+  flex: 1;
+  /* Allow all divs to take equal space */
+  text-align: center;
+}
+.image-left,.image-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-left img,.image-right img {
+  max-width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Ensure the image fills its container */
+}
+.text-center {
+  flex: 2;
+  /* Make the text div twice as wide as the image divs */
+  color: var(--secondary-colour);
+  font-size: 2rem;
+  /* Adjust font size as needed */
+  padding: 0 20px;
+  /* Add some padding for spacing */
+}
+/* Section Styling */
+.launching {
+  display: flex;
+  flex-direction: row;
+  /* Align image and text horizontally */
+  height: 800px;
+  /* Full viewport height */
+  position: relative;
+  overflow: hidden;
+  background: var(--primary-colour);
+  /* Use the var(--tertiary-colour) background from the rest of the site */
+  border-right: #000 solid;
+}
+/* Image Styling */
+.launching-images {
+  flex: 3;
+  /* Image takes up more space */
+  position: relative;
+  overflow: hidden;
+}
+.launching-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the image scales properly */
+}
+/* Text Content Styling */
+.launching-content {
+  flex: 2;
+  /* Text box takes less space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  color: #fff;
+  /* White text for contrast */
+  background: linear-gradient(to right, rgb(236, 134, 38), rgb(255, 169, 39), rgb(255, 160, 35));
+  z-index: 2;
+  /* Ensure it is above the image */
+}
+/* Text Styling */
+.launching-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Match other sections' shadow */
+}
+.launching-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.upcoming-trips {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f4f4f4;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.upcoming-trips h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.trips-content {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next row */
+  gap: 15px;
+  /* Space between cards */
+  justify-content: space-around;
+  /* Evenly distribute items */
+}
+.facebook-feed {
+  display: flex;
+  /* Enable row layout for charter items */
+  flex-wrap: wrap;
+  /* Allow items to wrap if they don't fit in one row */
+  gap: 15px;
+  /* Space between charter items */
+  justify-content: space-around;
+  /* Evenly distribute items with space around */
+}
+.charter-item {
+  flex: 0 1 calc(33.333% - 20px);
+  /* Three items per row, responsive */
+  max-width: 200px;
+  /* Ensure consistent size */
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.charter-item.available {
+  background: #478f47;
+  /* Green for available */
+  color: white;
+}
+.charter-item.offshore {
+  background: rgb(66, 180, 180);
+  /* Yellow for limited */
+  color: black;
+}
+.charter-item.unavailable {
+  background: #5b6369;
+  /* Grey for unavailable */
+  color: white;
+}
+.charter-item .charter-date {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.charter-item .charter-details {
+  font-size: 1em;
+  color: inherit;
+}
+.charter-item:hover {
+  transform: translateY(-5px);
+  /* Subtle lift effect */
+}
+
+.charter-item.tentative {
+  background: #ffe47a; /* Yellow */
+  color: black;
+}
+
+.charter-item.available {
+  background: #4CAF50; /* Green */
+  color: white;
+}

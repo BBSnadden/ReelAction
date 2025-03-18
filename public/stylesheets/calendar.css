@@ -1,0 +1,175 @@
+.calendar {
+    width: 90vw; /* Use viewport width for responsiveness */
+    max-width: 1400px; /* Prevent it from becoming too wide */
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 0;
+}
+
+.calendar header h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.calendar .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar .nav-buttons button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures equal width columns */
+}
+
+
+.calendar table th,
+.calendar table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #777777;
+    position: relative;
+    background-color: aliceblue;
+    height: 100px; /* Increase height for uniformity */
+    vertical-align: middle; /* Ensure content is vertically centered */
+}
+
+.calendar table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Ensures text wraps within the cell */
+    word-wrap: break-word; /* Prevents text from overflowing */
+}
+
+
+.calendar table td .date {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.3em;
+    color: black;
+}
+
+#calendarBody {
+    font-size: 0.9em;
+}
+
+/* Colors Based on Booking Status */
+.calendar table td.available {
+    background-color: #6bd86b; /* Green for available */
+    color: white;
+    cursor: pointer;
+}
+
+.calendar table td.unavailable {
+    background-color: #343a40; /* Dark grey for unavailable */
+    color: white;
+    cursor: not-allowed;
+}
+
+.calendar table td.booked {
+    background-color: #dc3545; /* Red for booked */
+    color: white;
+    cursor: not-allowed;
+}
+
+.calendar table td.cancelled {
+    background-color: #5b6369; /* Grey for cancelled */
+    color: white;
+    cursor: not-allowed;
+}
+
+.calendar table td.tentative {
+    background-color: #ffe47a; /* Yellow for tentative */
+    color: black;
+    cursor: pointer;
+}
+
+/* Additional Colors Based on Charter Type */
+.calendar table td.charter-tuna {
+    border: 3px solid #007bff; /* Blue border for Tuna charters */
+}
+
+.calendar table td.charter-reef {
+    border: 3px solid #28a745; /* Green border for Reef charters */
+}
+
+.calendar table td.charter-tuna-and-reef {
+    border: 3px solid #ffc107; /* Yellow border for Tuna and Reef charters */
+}
+
+/* Hover Effects */
+.calendar table td.available:hover,
+.calendar table td.tentative:hover {
+    background-color: #4ca64c; /* Darker green */
+    color: white;
+}
+
+.calendar table td.charter-tuna:hover,
+.calendar table td.charter-reef:hover,
+.calendar table td.charter-tuna-and-reef:hover {
+    border-color: #000; /* Highlight border on hover */
+}
+
+/* Controls Styles */
+#calendarControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#calendarControls label {
+    font-size: 14px;
+}
+
+#calendarControls select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#calendarControls button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,114 @@
+/* ✅ Apply a repeating small wave pattern as the background */
+body {
+  background-color: #202020;
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='18' viewBox='0 0 76 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 18c-2.43-1.824-4-4.73-4-8 0-4.418-3.582-8-8-8H0V0h20c5.523 0 10 4.477 10 10 0 4.418 3.582 8 8 8h20c4.418 0 8-3.582 8-8 0-5.523 4.477-10 10-10v2c-4.418 0-8 3.582-8 8 0 3.27-1.57 6.176-4 8H32zM64 0c-1.67 1.256-3.748 2-6 2H38c-2.252 0-4.33-.744-6-2h32z' fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+
+.hero {
+    background-color: var(--bg-colour); /* Black background for contrast */
+    color: var(--text-colour); /* White text */
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid var(--secondary-colour); /* Sharp bottom border */
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+/* Charters & Pricing Section */
+.charters-pricing {
+    color: var(--text-color); /* White text for readability */
+    padding: 50px 20px;
+    border-bottom: 3px solid var(--secondary-colour);
+  }
+  
+  .charters-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .charters-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--secondary-colour); /* Underline for emphasis */
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .charter {
+    display: flex;
+    align-items: flex-start; /* ✅ Ensures text starts at the same height as the image */
+    background-color: var(--primary-colour);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondary-colour);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 180px; /* ✅ Ensures all boxes are equal in height */
+    
+    
+}
+  
+  .charter:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
+  }
+  
+  .charter img {
+    width: 150px; /* Fixed size for square image */
+    height: 150px;
+    object-fit: cover; /* Ensure proper scaling */
+    margin-right: 20px; /* Space between image and details */
+    border: 2px solid var(--secondary-colour); /* Sharp border for images */
+  }
+  
+  .charter-details {
+    flex: 1; /* Let the details take up the remaining space */
+  }
+  
+  .charter h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .charter p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  .charter strong {
+    color: var(--bg-colour); /* Highlight key information */
+  }
+  
+  .charter-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    padding-bottom: 8px; /* ✅ Adds spacing below text */
+    margin-bottom: 8px; /* ✅ Ensures text is spaced evenly */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* ✅ Light separator */
+}
+
+/* ✅ Remove border-bottom from last paragraph to prevent extra line */
+.charter-details p:last-child {
+    border-bottom: none;
+}

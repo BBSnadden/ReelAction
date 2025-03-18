@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Action Fishing Charters</title>
+    <link rel="stylesheet" href="/stylesheets/universal.css">
+    <link rel="stylesheet" href="/stylesheets/calendar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar shrink">
+          <div class="logo">
+            <a href="/index">
+              <img src="/images/logo.png" alt="Reel Action Fishing Charters Logo">
+            </a>
+          </div>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="About">About Us</a></li>
+              <li><a href="Raptor">Raptor</a></li>
+              <li><a href="Blog">Our Blog</a></li>
+              <li><a href="Packages">Packages</a></li>
+              <li><a href="Crew">The Crew</a></li>
+              <li><a href="Testimonials">Testimonials</a></li>
+              <li><a href="Calendar">Bookings Calendar</a></li>
+              <li><a href="Contact">Contact Us</a></li>
+              <li><a href="Gallery">Photo Galleries</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    
+    <section class="calendar-section">
+        <div class="calendar">
+            <div class="nav-buttons">
+                <button id="prevMonth"><i class="fas fa-arrow-left"></i></button>
+                <header>
+                    <h2 id="monthAndYear"></h2>
+                </header>
+                <button id="nextMonth"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div id="calendarControls">
+                <label for="monthSelect">Month:</label>
+                <select id="monthSelect" name="month">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <label for="yearSelect">Year:</label>
+                <select id="yearSelect" name="year"></select>
+                <button id="change" type="button">Change</button>
+            </div>
+            
+            <table id="calendarTable">
+                <thead>
+                    <tr>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reel Action Fishing Charters. All rights reserved.</p>
+        <button id="loginButton" class="btn btn-login">Login</button>
+    </footer>
+   
+    
+      <script src="javascripts/calendar.js"></script>
+      <script src="javascripts/universal.js"></script>
+</body>
+</html>

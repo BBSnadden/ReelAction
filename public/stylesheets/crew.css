@@ -1,0 +1,91 @@
+.hero {
+    background-color: var(--bg-color); /* Black background for contrast */
+    color: var(--text-color); /* White text */
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid var(--secondary-colour); /* Sharp bottom border */
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Crew Members Section */
+  .crew-members {
+    background-color: var(--bg-color); /* Black background */
+    color: var(--text-color);
+    padding: 50px 20px;
+  }
+  
+  .crew-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .crew-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--secondary-colour); /* Underline for emphasis */
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .crew-member {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--primary-colour); /* colour background for each crew member */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondary-colour); /* Sharp borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    border-radius: 0; /* Remove rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .crew-member:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
+  }
+  
+  .crew-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and details */
+    border: 2px solid var(--secondary-colour); /* Sharp border for images */
+  }
+  
+  .crew-details {
+    flex: 1; /* Allow details to take up remaining space */
+  }
+  
+  .crew-details h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .crew-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .crew-details strong {
+    color: var(--hover-colour); /* Highlight key information */
+  }
+  

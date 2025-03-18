@@ -1,0 +1,149 @@
+/* Hero Section */
+.hero {
+    background-color: var(--bg-color); /* Black background for contrast */
+    color: var(--text-color); /* White text */
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid var(--secondary-colour); /* Sharp bottom border */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Information Section */
+.contact-info {
+    background-color: var(--bg-color); /* Black background */
+    color: var(--text-color); /* White text */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--secondary-colour); /* Underline for emphasis */
+    padding-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-container li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-container a {
+    color: var(--hover-colour);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-container a:hover {
+    color: var(--secondary-colour);
+}
+
+/* Contact Form Section */
+/* Contact Form Section */
+.contact-form {
+    background-color: var(--bg-color); /* Black background */
+    color: var(--text-color); /* White text */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--primary-colour); /* colour background for form */
+    padding: 30px;
+    border: 2px solid var(--secondary-colour); /* Sharp borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    border-radius: 0; /* Remove rounded corners */
+    text-align: left; /* Align form content to the left */
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; /* Center the heading */
+    color: var(--text-color);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between fields */
+}
+
+.form-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--secondary-colour);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: var(--hover-colour);
+    box-shadow: 0 0 5px var(--hover-colour);
+}
+
+.form-container button {
+    background-color: var(--secondary-colour);
+    color: var(--text-color);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--hover-colour);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
